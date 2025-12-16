@@ -82,42 +82,6 @@ Before publishing this repository, verify the following:
 - [ ] No `composer.lock` files contain sensitive data
 - [ ] `.gitignore` is properly configured
 
-### Automated Verification
-Run the security verification script:
-```bash
-bash verify-security.sh
-```
-
-### Manual Verification Commands
-```bash
-# Check for .env files
-find . -name ".env" -type f
-
-# Check for hardcoded credentials in PHP files
-grep -r "kms_[a-zA-Z0-9]{20,}" --include="*.php" .
-grep -r "password\s*=\s*['\"][^'\"]*['\"]" --include="*.php" .
-
-# Verify .env files are in .gitignore
-git status
-
-# Check git history for accidentally committed secrets
-git log --all --full-history -- "*.env"
-```
-
-### Safe to Commit
-- ✅ `.env.example` files with placeholder values only
-- ✅ All PHP files use `$_ENV` variables
-- ✅ Documentation files with no personal information
-- ✅ `composer.json` files without author details
-- ✅ `.gitignore` configured to exclude sensitive files
-
-### Not Safe to Commit
-- ❌ `.env` files with real credentials
-- ❌ Hardcoded API keys or passwords
-- ❌ Personal email addresses
-- ❌ `vendor/` directory
-- ❌ Files containing actual SMTP credentials
-
 ## Support
 
-For more information about Keplers.email, visit the official documentation.
+For more information about [Keplers.email](https://keplers.email/), visit the official documentation.
