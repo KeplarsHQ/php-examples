@@ -1,0 +1,17 @@
+{
+  "name": "keplers/api-example",
+  "description": "Keplers.email API example for PHP",
+  "type": "project",
+  "keywords": ["keplers", "email", "api"],
+  "license": "MIT",
+  "require": {
+    "php": "^7.4|^8.0",
+    "guzzlehttp/guzzle": "^7.8",
+    "vlucas/phpdotenv": "^5.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "Keplers\\": "src/"
+    }
+  }
+}
