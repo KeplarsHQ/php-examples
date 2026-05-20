@@ -22,7 +22,7 @@ cp .env.example .env
 
 3. Configure your Keplers.email API credentials in `.env`:
 ```env
-API_BASE_URL=https://api.keplers.email/api/v1
+API_BASE_URL=https://api.keplars.com/api/v1
 API_KEY=kms_xxxx
 TO_EMAIL=recipient@example.com
 USER_NAME=your-username
@@ -41,7 +41,7 @@ The script will send an instant email and display the results in the console.
 
 | Variable | Description | Example |
 |----------|-------------|---------|
-| `API_BASE_URL` | Keplers.email API base URL | `https://api.keplers.email/api/v1` |
+| `API_BASE_URL` | Keplers.email API base URL | `https://api.keplars.com/api/v1` |
 | `API_KEY` | Your Keplers.email API key (starts with `kms_`) | `kms_xxxx` |
 | `TO_EMAIL` | Recipient email address | `recipient@example.com` |
 | `USER_NAME` | Username for personalization | `your-username` |
